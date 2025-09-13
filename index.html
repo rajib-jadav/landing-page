@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!--Header design-->
     <header class="header">
         <div class="logo">
-            <a href="#"><img src="logo.png" alt="Logo"></a>
+            <a href="#"><img src="/image/Logo.png" alt="Logo"></a>
         </div>
         <nav class="navbar">
             <ul>
@@ -22,9 +23,14 @@
             </ul>
         </nav>
         <div class="header-cta">
-
-            <a href="#">Log In</a>
-            <a href="#">Sign Up</a>
+            <div class="button" id="login-button">
+                <i class="ri-user-line"></i>
+                <a href="#">Log In</a>
+            </div>
+            <div class="button" id="signin-button">
+                <i class="ri-user-line"></i>
+                <a href="#">Sign In</a>
+            </div>
         </div>
     </header>
     <!--Header design end-->
@@ -37,7 +43,7 @@
                 <div class="heroContent">
                     <h1 class="heroTitle">Welcome to Our Website</h1>
                     <p class="heroDescription">Your success is our priority. We provide top-notch services to help you achieve your goals.</p>
-                    <div class="hero-cta">
+                    <div class="button" id="hero-cta">
                         <a href="#">Get Started</a>
                     </div>
                 </div>
@@ -53,41 +59,38 @@
                     <p class="section-description">We offer a wide range of services to meet your needs.</p>
                 </div>
 
-                <div class="service-wrapper">
-                    <div class="service-container">
-                        <!--service 1-->
-                        <div id="Business-strategy" class="service-card">
-                            <h3 class="service-title">Business-strategy</h3>
-                            <a href="#">Explore More</a>
-                        </div>
-                        <!--service 2-->
-                        <div id="UI/UX-Design" class="service-card">
-                            <h3 class="service-title">UI/UX Design</h3>
-                            <a href="#">Explore More</a>
-                        </div>
-                        <!--service 3-->
-                        <div id="Development" class="service-card">
-                            <h3 class="service-title">Development</h3>
-                            <a href="#">Explore More</a>
-                        </div>
-                        <!--service 4-->
-                        <div id="Digital-Marketing" class="service-card">
-                            <h3 class="service-title">Digital Marketing</h3>
-                            <a href="#">Explore More</a>
-                        </div>
-                        </div>
-                        <!--service 5-->
-                        <div id="Content-Creation" class="service-card">
-                            <h3 class="service-title">Content Creation</h3>
-                            <a href="#">Explore More</a>
-                        </div>
-                        <!--service 6-->
-                        <div id="Graphic-Design" class="service-card">
-                            <h3 class="service-title">Graphic Design</h3>
-                            <a href="#">Explore More</a>
-                        </div>
+                <div class="service-container">
+                    <!--service 1-->
+                    <div id="Business-strategy" class="service-card">
+                        <h3 class="service-title">Business-strategy</h3>
+                        <a href="#">Explore More</a>
                     </div>
-                </section>
+                    <!--service 2-->
+                    <div id="UI/UX-Design" class="service-card">
+                        <h3 class="service-title">UI/UX Design</h3>
+                        <a href="#">Explore More</a>
+                    </div>
+                    <!--service 3-->
+                    <div id="Development" class="service-card">
+                        <h3 class="service-title">Development</h3>
+                        <a href="#">Explore More</a>
+                    </div>
+                    <!--service 4-->
+                    <div id="Digital-Marketing" class="service-card">
+                        <h3 class="service-title">Digital Marketing</h3>
+                        <a href="#">Explore More</a>
+                    </div>
+                    <!--service 5-->
+                    <div id="Content-Creation" class="service-card">
+                        <h3 class="service-title">Content Creation</h3>
+                        <a href="#">Explore More</a>
+                    </div>
+                    <!--service 6-->
+                    <div id="Graphic-Design" class="service-card">
+                        <h3 class="service-title">Graphic Design</h3>
+                        <a href="#">Explore More</a>
+                    </div>
+                </div>    
             </div>    
         </section>
         <!--Our Service end-->

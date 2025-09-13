@@ -1,5 +1,215 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* root color */
+:root {
+    --primary-color: #1e90ff;
+    --secondary-color: #f5f5f5;
+    --section-color: #eee;
+    --accent-color: #f14c2e;
+    --text-color: #333;
+    --font-family: 'Arial', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.heroTitle{
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.heroDescription {
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    line-height: 1.5;
+
+}
+
+.section-title {
+    font-size: 1.75rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.section-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    line-height: 1.5;
+    font-weight: 400;
+    max-width: 600px;
+    margin-left: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* button style */
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-color);
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--text-color);
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#signin-button {
+    border: none;
+    background-color: var(--primary-color);
+    color: #fff;
+
+
+}
+
+#login-button {
+    border: none;
+    background-color: #e7ebf7;
+    color: #565658;
+}
+/* button style end */
+
+/* Header section */
+.header{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 0.5rem 3rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li a{
+    font-weight: 400;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+/* Header section end */
+
+/* Hero section */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    width: 100%;
+    background-image: url(/image/hero-img.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.heroContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroContent{
+    background-color: rgba(14, 19, 46, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    text-align: center;
+}
+
+#hero-cta {
+    border: none;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Hero section end */
+/* Responsive design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin: 1rem 0 1rem 0;
+    }
+
+    .header-cta {
+        display: flex;
+        width: 80%;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    section {
+        height: auto;
+        padding: 2rem 0;
+    }
+
+    .heroContent {
+        max-width: 80%;
+    }
+}
+/* Responsive design end */
+
+/* Our Service section */
+.service-section {
+    background-color: var(--section-color);
+}
+
+.service-card {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-title {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.service-card a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
 }
