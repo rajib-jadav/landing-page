@@ -290,3 +290,54 @@ a {
 }
 
 /* Our Service section end */
+/*portfolio section*/
+.portfolio-container {
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+} */
+
+.portfolio-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.portfolio-item {
+    display: flex;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    padding: 2rem 0;
+}
+
+.portfolio-content {
+    width: 50%;
+    align-items: start;
+    
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-image{
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+}
