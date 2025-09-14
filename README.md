@@ -15,3 +15,5 @@ This is a simple landing page built with HTML, CSS, and images.
 ## Day 3 (14 Sept 2025)
 - add style service section
 - then push all changes in GitHub
+- add style portfolio section 
+- then push all recode 
