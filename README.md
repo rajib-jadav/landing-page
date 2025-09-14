@@ -11,3 +11,7 @@ This is a simple landing page built with HTML, CSS, and images.
 - Crate Design System guideline
 - add style header & Hero-section with responsive
 - then push all changes in GitHub using git.
+
+## Day 3 (14 Sept 2025)
+- add style service section
+- then push all changes in GitHub
