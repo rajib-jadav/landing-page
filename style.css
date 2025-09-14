@@ -181,35 +181,112 @@ a {
     .heroContent {
         max-width: 80%;
     }
+
 }
 /* Responsive design end */
 
 /* Our Service section */
 .service-section {
     background-color: var(--section-color);
+    min-height: 100vh; /* vrh → vh + better responsive */
+    padding: 2rem 3rem; /* Adjusted padding for better spacing */
+}
+
+/* Service Container */
+.service-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 2rem 0;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .service-card {
-    background-color: var(--secondary-color);
-    border: 1px solid var(--primary-color);
-    border-radius: 10px;
-    padding: 2rem;
-    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    padding: 1rem;
+    width: 30%;
+    min-height: 450px;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .service-title {
     font-size: 1.5rem;
-    color: var(--text-color);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
 }
 
-.service-card a {
-    display: inline-block;
-    margin-top: 1rem;
-    color: var(--primary-color);
-    font-weight: 600;
+#Business-strategy {
+    background-image: 
+    linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0)),
+    url(/image/Image.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
+#UIUX-Design {
+    background-image: 
+    linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0)),
+    url(/image/uiux-design.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#Development {
+    background-image: 
+    linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0)),
+    url(/image/development.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#Digital-Marketing {
+    background-image: 
+    linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0)),
+    url(/image/digital-marketing.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#Content-Creation {
+    background-image: 
+    linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0)),
+    url(/image/content-creation.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#Graphic-Design {
+    background-image: 
+    linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0)),
+    url(/image/graphic-design.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*responsive design for service section*/
+@media (max-width: 768px) {
+    .service-card {
+        width: 90%;
+        min-height: 300px;
+    }
+}
+
+/* Our Service section end */
