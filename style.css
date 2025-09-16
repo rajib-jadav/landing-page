@@ -117,6 +117,46 @@ a {
     border-radius: 20px;
     transition: all 0.3s ease;
 }
+
+/* Hide hamburger by default (desktop) */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background: var(--secondary-color);
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .header-cta {
+        display: none; /* চাইলে hide করো */
+    }
+}
+
 /* Header section end */
 
 /* Hero section */
@@ -283,6 +323,9 @@ a {
 
 /*responsive design for service section*/
 @media (max-width: 768px) {
+    .service-section {
+        padding: 1rem;
+    }
     .service-card {
         width: 90%;
         min-height: 300px;
@@ -291,6 +334,10 @@ a {
 
 /* Our Service section end */
 /*portfolio section*/
+#portfolio {
+    background-color: #fff;
+    min-height: 100vh;
+}
 .portfolio-container {
     padding: 2rem 3rem;
     display: flex;
@@ -312,32 +359,286 @@ a {
     justify-content: center;
     gap: 1.5rem;
     text-align: left;
-}
-
-.portfolio-item {
-    display: flex;
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    padding: 2rem 0;
-}
-
-.portfolio-content {
-    width: 50%;
-    align-items: start;
-    
-}
-
-.portfolio-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+    padding: 1rem 0;
 }
 
 .portfolio-image{
     width: 50%;
-    height: auto;
+    height: 380px;
     overflow: hidden;
+    border-radius: 12px;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    
+}
+
+.portfolio-content h4 {
+    font-size: 1.25rem;
+    color: var(--text-color);
+    font-weight: 500;
+    position: relative;
+}
+
+.portfolio-content h4::after {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 3px;
+  border-radius: 20px;
+  background: var(--primary-color);
+  margin: 1rem 0;
+}
+
+.portfolio-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.portfolio-description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    line-height: 1.5;
+    font-weight: 400;
+    max-width: 80%;
+}
+
+.line-cta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.line-cta a {
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.big-icon {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    /* margin-left: 0.5rem;
+    transition: transform 0.3s ease; */
+}
+
+
+/* Responsive design for portfolio section */
+@media (max-width: 768px) {
+    .portfolio-container {
+        padding: 1rem;
+    }
+
+    .portfolio-item {
+        flex-direction: column; /* ek column e ashbe */
+        text-align: start;
+        gap: 1rem;
+    }
+
+    .portfolio-image {
+        order: 1; /* always first */
+        height: 380px;
+        overflow: hidden;
+        border-radius: 8px;
+        width: 100%;
+    }
+
+    .portfolio-content {
+        order: 2; /* always second */
+        width: 100%;
+    }
+
+    .portfolio-description {
+        max-width: 100%;
+    }
+}
+
+/*portfolio section end*/
+/*content section*/
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 900px;
     margin: 0 auto;
+    height: 400px;
+    background-color: var(--primary-color);
+    padding: 2rem;
+    color: var(--secondary-color);
+    border-radius: 16px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content-title {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.content-description {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+    max-width: 600px;
+}
+
+.contact-cta {
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+
+/* Responsive design for contact section */
+@media (max-width: 768px) {
+    .contact-container {
+        width: 80%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .content-title {
+        font-size: 1.75rem;
+    }
+
+    .content-description {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+}
+
+/*content section end*/
+/*footer section*/
+.footer {
+  background-color: #2a2822;
+  color: #ffffff;
+  padding: 2rem 3rem;
+}
+
+.logo-svg {
+  filter: brightness(0) invert(1); /* কালো → সাদা করে দেবে */
+}
+
+
+.footer-content-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.footer-section h3::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--primary-color);
+  margin-top: 0.3rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #cccccc;
+  font-size: 0.95rem;
+}
+
+.footer-section ul li a:hover {
+  color: var(--primary-color);
+}
+
+.footer-section p {
+  color: #cccccc;
+  line-height: 1.5;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+/* Bottom Footer */
+#Bottom-footer {
+  margin-top: 2rem;
+  border-top: 1px solid #c4c4c4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  font-size: 0.875rem;
+  color: #aaaaaa;
+}
+
+.social-links a {
+  margin-left: 1rem;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.social-links a:hover {
+  color: orange;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-content-top {
+    flex-direction: column;
+    text-align: start;
+    gap: 1.5rem;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }

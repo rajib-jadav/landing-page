@@ -17,3 +17,8 @@ This is a simple landing page built with HTML, CSS, and images.
 - then push all changes in GitHub
 - add style portfolio section 
 - then push all recode 
+
+## Day 4 (16 Spet 2025)
+- Today Done This page HTML & CSS
+- I'm not familiar with JS, so my hamburger menu isn't working well.
+- !
